@@ -36,7 +36,7 @@ import 'package:http/http.dart' as http;
 // For Member Check
 Future ChannelCheck(user_id) async {
   var ChannelId = Platform.environment['ChannelId'] ?? '-1001452834480';
-  var token = Platform.environment['BotToken'] ?? '';
+  var token = Platform.environment['BotToken'] ?? '1692797441:AAEI2k0g8nMZXaDtlTEe59kZC5qEwHnOBdk';
   var url = ('https://api.telegram.org/bot${token}/getChatMember?chat_id=${ChannelId}&user_id=${user_id})');
   var response = await http.get(url);
   if (response.body.toString().contains('administrator') || response.body.toString().contains('member') || response.body.toString().contains('creator')) {
